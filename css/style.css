@@ -93,18 +93,22 @@ body{
     color: #111;
 }
 
-@media screen and (max-width:574px){
-    .greetings{
+@media screen and (max-width: 574px) {
+    .greetings {
         display: block;
-        font-size: 4rem;
+        font-size: clamp(2rem, 10vw, 4rem); /* Tamaño de fuente dinámico */
         font-weight: 800;
         text-align: center;
+        line-height: 1.2; /* Ajusta el espaciado entre líneas */
+        padding: 0 5%; /* Espacio horizontal para evitar que el texto se pegue a los bordes */
+        word-break: break-word; /* Permite que el texto se ajuste mejor si es largo */
     }
-    .description{
-        font-size: 2rem;
-    }
-    
-    .button a{
-        font-size: 1rem;
-    }
+}
+.description {
+    font-size: clamp(1.5rem, 5vw, 2rem); /* Tamaño de fuente dinámico para descripción */
+    padding: 0 5%; /* Espacio horizontal para evitar que el texto se pegue a los bordes */
+}
+
+.button a {
+    font-size: clamp(0.8rem, 3vw, 1rem); /* Tamaño de fuente dinámico para botones */
 }
